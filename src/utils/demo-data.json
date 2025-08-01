@@ -1,0 +1,541 @@
+{
+    "dragonboat_paddlers": [
+        {
+            "id": "csv_1754080745277_2",
+            "name": "Matthew",
+            "gender": "Female",
+            "weight": 89,
+            "preferredSide": "Right",
+            "strengthScore": 4,
+            "experienceScore": 4
+        },
+        {
+            "id": "csv_1754080745277_3",
+            "name": "Jason",
+            "gender": "Female",
+            "weight": 55,
+            "preferredSide": "Left",
+            "strengthScore": 3,
+            "experienceScore": 2
+        },
+        {
+            "id": "csv_1754080745277_4",
+            "name": "Robert",
+            "gender": "Female",
+            "weight": 84,
+            "preferredSide": "Right",
+            "strengthScore": 1,
+            "experienceScore": 4
+        },
+        {
+            "id": "csv_1754080745277_5",
+            "name": "Brandon",
+            "gender": "Female",
+            "weight": 72,
+            "preferredSide": "Right",
+            "strengthScore": 2,
+            "experienceScore": 3
+        },
+        {
+            "id": "csv_1754080745277_6",
+            "name": "Shannon",
+            "gender": "Male",
+            "weight": 86,
+            "preferredSide": "Right",
+            "strengthScore": 5,
+            "experienceScore": 5
+        },
+        {
+            "id": "csv_1754080745277_7",
+            "name": "Linda",
+            "gender": "Female",
+            "weight": 55,
+            "preferredSide": "Left",
+            "strengthScore": 4,
+            "experienceScore": 4
+        },
+        {
+            "id": "csv_1754080745277_8",
+            "name": "Charles",
+            "gender": "Female",
+            "weight": 69,
+            "preferredSide": "Right",
+            "strengthScore": 5,
+            "experienceScore": 2
+        },
+        {
+            "id": "csv_1754080745277_9",
+            "name": "Manuel",
+            "gender": "Other",
+            "weight": 82,
+            "preferredSide": "Ambi",
+            "strengthScore": 4,
+            "experienceScore": 5
+        },
+        {
+            "id": "csv_1754080745277_10",
+            "name": "Dawn",
+            "gender": "Male",
+            "weight": 76,
+            "preferredSide": "Left",
+            "strengthScore": 1,
+            "experienceScore": 5
+        },
+        {
+            "id": "csv_1754080745277_11",
+            "name": "David",
+            "gender": "Female",
+            "weight": 51,
+            "preferredSide": "Right",
+            "strengthScore": 1,
+            "experienceScore": 1
+        },
+        {
+            "id": "csv_1754080745277_12",
+            "name": "Tiffany",
+            "gender": "Male",
+            "weight": 71,
+            "preferredSide": "Left",
+            "strengthScore": 2,
+            "experienceScore": 2
+        },
+        {
+            "id": "csv_1754080745277_13",
+            "name": "Renee",
+            "gender": "Male",
+            "weight": 82,
+            "preferredSide": "Left",
+            "strengthScore": 4,
+            "experienceScore": 2
+        },
+        {
+            "id": "csv_1754080745277_14",
+            "name": "Wang",
+            "gender": "Male",
+            "weight": 55,
+            "preferredSide": "Left",
+            "strengthScore": 2,
+            "experienceScore": 1
+        },
+        {
+            "id": "csv_1754080745277_15",
+            "name": "Kim",
+            "gender": "Male",
+            "weight": 95,
+            "preferredSide": "Ambi",
+            "strengthScore": 2,
+            "experienceScore": 4
+        },
+        {
+            "id": "csv_1754080745277_16",
+            "name": "Brenda",
+            "gender": "Male",
+            "weight": 63,
+            "preferredSide": "Left",
+            "strengthScore": 4,
+            "experienceScore": 1
+        },
+        {
+            "id": "csv_1754080745277_17",
+            "name": "Amy",
+            "gender": "Male",
+            "weight": 54,
+            "preferredSide": "Left",
+            "strengthScore": 3,
+            "experienceScore": 4
+        },
+        {
+            "id": "csv_1754080745277_18",
+            "name": "Michael",
+            "gender": "Female",
+            "weight": 65,
+            "preferredSide": "Right",
+            "strengthScore": 5,
+            "experienceScore": 4
+        },
+        {
+            "id": "csv_1754080745277_19",
+            "name": "Dave",
+            "gender": "Female",
+            "weight": 86,
+            "preferredSide": "Left",
+            "strengthScore": 3,
+            "experienceScore": 3
+        },
+        {
+            "id": "csv_1754080745277_20",
+            "name": "Shelley",
+            "gender": "Female",
+            "weight": 96,
+            "preferredSide": "Right",
+            "strengthScore": 4,
+            "experienceScore": 1
+        },
+        {
+            "id": "csv_1754080745277_21",
+            "name": "Kevin",
+            "gender": "Female",
+            "weight": 74,
+            "preferredSide": "Left",
+            "strengthScore": 2,
+            "experienceScore": 5
+        },
+        {
+            "id": "csv_1754080745277_22",
+            "name": "John",
+            "gender": "Male",
+            "weight": 80,
+            "preferredSide": "Right",
+            "strengthScore": 2,
+            "experienceScore": 3
+        },
+        {
+            "id": "csv_1754080745277_23",
+            "name": "Karla",
+            "gender": "Male",
+            "weight": 64,
+            "preferredSide": "Left",
+            "strengthScore": 2,
+            "experienceScore": 5
+        },
+        {
+            "id": "csv_1754080745277_24",
+            "name": "Susan",
+            "gender": "Male",
+            "weight": 57,
+            "preferredSide": "Right",
+            "strengthScore": 3,
+            "experienceScore": 3
+        },
+        {
+            "id": "csv_1754080745277_25",
+            "name": "Sarah",
+            "gender": "Male",
+            "weight": 84,
+            "preferredSide": "Right",
+            "strengthScore": 2,
+            "experienceScore": 2
+        },
+        {
+            "id": "csv_1754080745277_26",
+            "name": "Mary",
+            "gender": "Female",
+            "weight": 87,
+            "preferredSide": "Left",
+            "strengthScore": 2,
+            "experienceScore": 3
+        },
+        {
+            "id": "csv_1754080745277_27",
+            "name": "Katrina",
+            "gender": "Female",
+            "weight": 98,
+            "preferredSide": "Right",
+            "strengthScore": 5,
+            "experienceScore": 3
+        },
+        {
+            "id": "csv_1754080745277_28",
+            "name": "Carlos",
+            "gender": "Female",
+            "weight": 58,
+            "preferredSide": "Right",
+            "strengthScore": 2,
+            "experienceScore": 4
+        },
+        {
+            "id": "csv_1754080745277_29",
+            "name": "Joseph",
+            "gender": "Male",
+            "weight": 79,
+            "preferredSide": "Left",
+            "strengthScore": 1,
+            "experienceScore": 4
+        },
+        {
+            "id": "csv_1754080745277_30",
+            "name": "Jacob",
+            "gender": "Female",
+            "weight": 93,
+            "preferredSide": "Left",
+            "strengthScore": 4,
+            "experienceScore": 2
+        },
+        {
+            "id": "csv_1754080745277_31",
+            "name": "Patrick",
+            "gender": "Female",
+            "weight": 97,
+            "preferredSide": "Left",
+            "strengthScore": 5,
+            "experienceScore": 4
+        },
+        {
+            "id": "csv_1754080745277_32",
+            "name": "Sam",
+            "gender": "Other",
+            "weight": 58,
+            "preferredSide": "Left",
+            "strengthScore": 3,
+            "experienceScore": 1
+        }
+    ],
+    "dragonboat_current_state": {
+        "seats": [
+            {
+                "row": 1,
+                "side": "Left",
+                "isLocked": false,
+                "paddler": {
+                    "id": "csv_1754080745277_23",
+                    "name": "Karla",
+                    "gender": "Male",
+                    "weight": 64,
+                    "preferredSide": "Left",
+                    "strengthScore": 2,
+                    "experienceScore": 5
+                }
+            },
+            {
+                "row": 1,
+                "side": "Right",
+                "isLocked": false,
+                "paddler": {
+                    "id": "csv_1754080745277_7",
+                    "name": "Linda",
+                    "gender": "Female",
+                    "weight": 55,
+                    "preferredSide": "Left",
+                    "strengthScore": 4,
+                    "experienceScore": 4
+                }
+            },
+            {
+                "row": 2,
+                "side": "Left",
+                "isLocked": false,
+                "paddler": {
+                    "id": "csv_1754080745277_23",
+                    "name": "Karla",
+                    "gender": "Male",
+                    "weight": 64,
+                    "preferredSide": "Left",
+                    "strengthScore": 2,
+                    "experienceScore": 5
+                }
+            },
+            {
+                "row": 2,
+                "side": "Right",
+                "isLocked": true
+            },
+            {
+                "row": 3,
+                "side": "Left",
+                "isLocked": true,
+                "paddler": {
+                    "id": "csv_1754080745277_15",
+                    "name": "Kim",
+                    "gender": "Male",
+                    "weight": 95,
+                    "preferredSide": "Ambi",
+                    "strengthScore": 2,
+                    "experienceScore": 4
+                }
+            },
+            {
+                "row": 3,
+                "side": "Right",
+                "isLocked": false,
+                "paddler": {
+                    "id": "csv_1754080745277_18",
+                    "name": "Michael",
+                    "gender": "Female",
+                    "weight": 65,
+                    "preferredSide": "Right",
+                    "strengthScore": 5,
+                    "experienceScore": 4
+                }
+            },
+            {
+                "row": 4,
+                "side": "Left",
+                "isLocked": false
+            },
+            {
+                "row": 4,
+                "side": "Right",
+                "isLocked": false,
+                "paddler": {
+                    "id": "csv_1754080745277_27",
+                    "name": "Katrina",
+                    "gender": "Female",
+                    "weight": 98,
+                    "preferredSide": "Right",
+                    "strengthScore": 5,
+                    "experienceScore": 3
+                }
+            },
+            {
+                "row": 5,
+                "side": "Left",
+                "isLocked": true,
+                "paddler": {
+                    "id": "csv_1754080745277_13",
+                    "name": "Renee",
+                    "gender": "Male",
+                    "weight": 82,
+                    "preferredSide": "Left",
+                    "strengthScore": 4,
+                    "experienceScore": 2
+                }
+            },
+            {
+                "row": 5,
+                "side": "Right",
+                "isLocked": true,
+                "paddler": {
+                    "id": "csv_1754080745277_6",
+                    "name": "Shannon",
+                    "gender": "Male",
+                    "weight": 86,
+                    "preferredSide": "Right",
+                    "strengthScore": 5,
+                    "experienceScore": 5
+                }
+            },
+            {
+                "row": 6,
+                "side": "Left",
+                "isLocked": false,
+                "paddler": {
+                    "id": "csv_1754080745277_7",
+                    "name": "Linda",
+                    "gender": "Female",
+                    "weight": 55,
+                    "preferredSide": "Left",
+                    "strengthScore": 4,
+                    "experienceScore": 4
+                }
+            },
+            {
+                "row": 6,
+                "side": "Right",
+                "isLocked": false
+            },
+            {
+                "row": 7,
+                "side": "Left",
+                "isLocked": false,
+                "paddler": {
+                    "id": "csv_1754080745277_13",
+                    "name": "Renee",
+                    "gender": "Male",
+                    "weight": 82,
+                    "preferredSide": "Left",
+                    "strengthScore": 4,
+                    "experienceScore": 2
+                }
+            },
+            {
+                "row": 7,
+                "side": "Right",
+                "isLocked": false,
+                "paddler": {
+                    "id": "csv_1754080745277_8",
+                    "name": "Charles",
+                    "gender": "Female",
+                    "weight": 69,
+                    "preferredSide": "Right",
+                    "strengthScore": 5,
+                    "experienceScore": 2
+                }
+            },
+            {
+                "row": 8,
+                "side": "Left",
+                "isLocked": false,
+                "paddler": {
+                    "id": "csv_1754080745277_16",
+                    "name": "Brenda",
+                    "gender": "Male",
+                    "weight": 63,
+                    "preferredSide": "Left",
+                    "strengthScore": 4,
+                    "experienceScore": 1
+                }
+            },
+            {
+                "row": 8,
+                "side": "Right",
+                "isLocked": false,
+                "paddler": {
+                    "id": "csv_1754080745277_8",
+                    "name": "Charles",
+                    "gender": "Female",
+                    "weight": 69,
+                    "preferredSide": "Right",
+                    "strengthScore": 5,
+                    "experienceScore": 2
+                }
+            },
+            {
+                "row": 9,
+                "side": "Left",
+                "isLocked": false,
+                "paddler": {
+                    "id": "csv_1754080745277_30",
+                    "name": "Jacob",
+                    "gender": "Female",
+                    "weight": 93,
+                    "preferredSide": "Left",
+                    "strengthScore": 4,
+                    "experienceScore": 2
+                }
+            },
+            {
+                "row": 9,
+                "side": "Right",
+                "isLocked": false,
+                "paddler": {
+                    "id": "csv_1754080745277_24",
+                    "name": "Susan",
+                    "gender": "Male",
+                    "weight": 57,
+                    "preferredSide": "Right",
+                    "strengthScore": 3,
+                    "experienceScore": 3
+                }
+            },
+            {
+                "row": 10,
+                "side": "Left",
+                "isLocked": false,
+                "paddler": {
+                    "id": "csv_1754080745277_19",
+                    "name": "Dave",
+                    "gender": "Female",
+                    "weight": 86,
+                    "preferredSide": "Left",
+                    "strengthScore": 3,
+                    "experienceScore": 3
+                }
+            },
+            {
+                "row": 10,
+                "side": "Right",
+                "isLocked": false,
+                "paddler": {
+                    "id": "csv_1754080745277_22",
+                    "name": "John",
+                    "gender": "Male",
+                    "weight": 80,
+                    "preferredSide": "Right",
+                    "strengthScore": 2,
+                    "experienceScore": 3
+                }
+            }
+        ],
+        "timestamp": "2025-08-01T20:45:05.957Z"
+    }
+}
