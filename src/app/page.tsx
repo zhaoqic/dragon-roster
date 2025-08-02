@@ -4,13 +4,10 @@ import { useState, useEffect } from 'react';
 import { Paddler, Seat, AssignmentConfig, AssignmentMetrics, BoatLineup } from '@/types';
 import { assignSeats, calculateMetrics } from '@/utils/seatAssignment';
 import { StorageManager } from '@/utils/storage';
-import { PDFExporter } from '@/utils/pdfExport';
 import PaddlersPage from '@/components/PaddlersPage';
 import AnalysisPanel from '@/components/AnalysisPanel';
 import BoatLayoutWithRoster from '@/components/BoatLayoutWithRoster';
 import { Users, Zap } from 'lucide-react';
-import demoData from '@/utils/demo-data.json';
-import appConfig from '@/config.json';
 
 const defaultConfig: AssignmentConfig = {
   prioritizeExperienceInFront: true,
@@ -31,7 +28,7 @@ export default function Home() {
     totalSidePreferences: 0,
     warnings: []
   });
-  const [config, setConfig] = useState<AssignmentConfig>(defaultConfig);
+  const [config] = useState<AssignmentConfig>(defaultConfig);
   const [activeTab, setActiveTab] = useState<'paddlers' | 'layout'>('paddlers');
   const [showSaveDialog, setShowSaveDialog] = useState(false);
   const [showLoadDialog, setShowLoadDialog] = useState(false);
@@ -41,27 +38,17 @@ export default function Home() {
 
   useEffect(() => {
     console.log('=== Initializing App ===');
-    console.log('Dev mode:', appConfig.devMode);
+    const devMode = true; // Enable dev mode by default
+    console.log('Dev mode:', devMode);
     
     const savedPaddlers = StorageManager.getPaddlers();
     console.log('Loading paddlers:', savedPaddlers.length, savedPaddlers.map(p => p.name));
     
     // Auto-load demo data in dev mode if no paddlers exist
-    if (appConfig.devMode && savedPaddlers.length === 0) {
+    // Auto-load demo data in dev mode if no paddlers exist
+    if (devMode && savedPaddlers.length === 0) {
       console.log('Dev mode enabled: Auto-loading demo data');
-      const demoPaddlers = demoData.dragonboat_paddlers as Paddler[];
-      const demoSeats = demoData.dragonboat_current_state.seats as Seat[];
-      
-      setPaddlers(demoPaddlers);
-      setSeats(demoSeats);
-      setMetrics(calculateMetrics(demoSeats));
-      
-      // Save to localStorage
-      StorageManager.savePaddlers(demoPaddlers);
-      StorageManager.saveCurrentState(demoSeats);
-      
-      loadLineups();
-      setIsInitialized(true);
+      loadDemoDataAsync();
       return;
     }
     
@@ -181,21 +168,59 @@ export default function Home() {
     }
   };
 
-  const handleLoadDemoData = () => {
-    if (confirm('This will replace all current data with demo data. Continue?')) {
-      // Load demo paddlers with proper typing
-      const demoPaddlers = demoData.dragonboat_paddlers as Paddler[];
-      setPaddlers(demoPaddlers);
+  const loadDemoDataAsync = async () => {
+    try {
+      const basePath = process.env.NODE_ENV === 'production' ? '/dragon-roster' : '';
+      const response = await fetch(`${basePath}/demo-data.json`);
+      const demoData = await response.json();
       
-      // Load demo seats state with proper typing
+      const demoPaddlers = demoData.dragonboat_paddlers as Paddler[];
       const demoSeats = demoData.dragonboat_current_state.seats as Seat[];
+      
+      setPaddlers(demoPaddlers);
       setSeats(demoSeats);
+      setMetrics(calculateMetrics(demoSeats));
       
       // Save to localStorage
       StorageManager.savePaddlers(demoPaddlers);
       StorageManager.saveCurrentState(demoSeats);
       
-      alert('Demo data loaded successfully!');
+      loadLineups();
+      setIsInitialized(true);
+    } catch (error) {
+      console.error('Failed to load demo data:', error);
+      // Continue with normal initialization
+      const initialSeats = createEmptySeats();
+      setSeats(initialSeats);
+      setMetrics(calculateMetrics(initialSeats));
+      loadLineups();
+      setIsInitialized(true);
+    }
+  };
+
+  const handleLoadDemoData = async () => {
+    if (confirm('This will replace all current data with demo data. Continue?')) {
+      try {
+        const basePath = process.env.NODE_ENV === 'production' ? '/dragon-roster' : '';
+        const response = await fetch(`${basePath}/demo-data.json`);
+        const demoData = await response.json();
+        
+        // Load demo paddlers with proper typing
+        const demoPaddlers = demoData.dragonboat_paddlers as Paddler[];
+        setPaddlers(demoPaddlers);
+        
+        // Load demo seats state with proper typing
+        const demoSeats = demoData.dragonboat_current_state.seats as Seat[];
+        setSeats(demoSeats);
+        
+        // Save to localStorage
+        StorageManager.savePaddlers(demoPaddlers);
+        StorageManager.saveCurrentState(demoSeats);
+        
+        alert('Demo data loaded successfully!');
+      } catch (error) {
+        alert('Failed to load demo data. Please try again.');
+      }
     }
   };
 
@@ -205,13 +230,6 @@ export default function Home() {
   };
 
 
-  const handleExportPDF = async () => {
-    try {
-      await PDFExporter.exportCurrentLineupToPDF(seats, metrics, 'boat-layout');
-    } catch (error) {
-      alert('Failed to export PDF');
-    }
-  };
 
 
   const handleSaveLineup = () => {
@@ -350,13 +368,6 @@ export default function Home() {
                     className="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed"
                   >
                     Export CSV
-                  </button>
-                  <button
-                    onClick={handleExportPDF}
-                    disabled={assignedSeats === 0}
-                    className="px-4 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700 disabled:bg-gray-400 disabled:cursor-not-allowed"
-                  >
-                    Export PDF
                   </button>
                 </div>
               </div>
